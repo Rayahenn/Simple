@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#app {
+  width: 100%;
+}
+
+#app header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 90px;
+  background-color: #023a5c;
+}
+
+#app header img {
+  position: absolute;
+  left: 15%;
+  width: 200px;
+  height: auto;
+}
+
+#app header form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#app header form input {
+  height: 30%;
+  padding-left: 10px;
+  width: 150px;
+  margin: 10px;
+}
+
+#app header form a {
+  font-size: 1.6rem;
+  margin: 10px;
+  color: white;
+}
+
+#app header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  margin: 0 auto 0 30%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#app header ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: space-evenly;
+      align-content: space-evenly;
+  margin: 0 10px;
+}
+
+#app header ul li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+  margin: 10px;
+}
+
+#app header ul li a:hover {
+  border-bottom: 2px solid white;
+}
+/*# sourceMappingURL=style.css.map */
