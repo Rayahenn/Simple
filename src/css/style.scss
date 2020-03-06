@@ -7,16 +7,19 @@
 #app {
     width: 100%;
     header {
+        position: relative;
         display: flex;
         height: 90px;
         background-color: rgb(2, 58, 92);
+        z-index: 100;
         img {
             position: absolute;
             left: 15%;
             width: 200px;
             height: auto;
+            z-index: 101;
         }
-        form {
+        .search {
             display: flex;
             align-items: center;
                 justify-content: center;
@@ -33,16 +36,15 @@
             }
         }
         
-        ul {
+        .menu {
             display: flex;
             width: 50%;
             margin: 0 auto 0 30%;
             height: 100%;
             align-items: center;
             justify-content: space-evenly;
-            //padding: auto 0;
             
-            li {
+            &__item {
                 display: flex;
                 width: 100px;
                 justify-content: center;
@@ -62,6 +64,101 @@
                     }
                 }
                 
+            }
+        }
+    }
+    .slider {
+        display: flex;
+        justify-content: center;
+        height: 883px;
+        overflow: hidden;
+        img {
+            flex: none;
+        }
+        .newsletter-form {
+            display: flex;
+            position: absolute;
+            width: 700px;
+            height: 50px;
+            top: 900px;
+            padding: 10px;
+            justify-content: center;
+            background-color: red;
+           align-items: center;
+
+            .form__main {
+                display: flex;
+                width: 500px;
+                justify-content: space-evenly;
+                line-height: 30px;
+                margin: auto;
+            }
+            button {
+                display: block;
+                position: relative;
+                width: 100px;
+                left: 100px;
+            }
+        }
+    }
+    .left-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 125px;
+        height: 700px;
+        z-index: 91;
+        background-color: white;
+        box-shadow: 2px 0 2px;
+    }
+    .branze {
+        height: 800px;
+        background-color: #023a5c;
+        text-align: center;
+        line-height: 100px;
+        .title {
+            display: inline-block;
+            text-align: center;
+            width: 200px;
+            margin: 0 auto;
+            img {
+                vertical-align: middle;
+            }
+            h1 {
+                display: inline-block;
+                width: 100px;
+                margin: 0 auto;
+                color: white;
+            }
+        }
+
+        .list {
+            position: relative;
+            display: grid;
+            width: 70%;
+            height: 500px;
+            left: 50%;
+            transform: translateX(-50%);
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-gap: 30px 30px;
+            .list__item {
+                display: inline-grid;
+                justify-items: center;
+                align-items: center;
+                transition: 0.2s linear;
+                cursor: pointer;
+                background-image: url(https://dummyimage.com/300x150/658ae6/7175b3);
+                opacity: 0.2;
+                &:hover {
+                    opacity: 1;
+                }
+                a {
+                    font-size: 1.6rem;
+                    text-decoration: none;
+                    color: white;
+                    margin: 0 auto;
+                }
             }
         }
     }
