@@ -7,6 +7,7 @@
 
 #app {
   width: 100%;
+  font-family: 'Open Sans', Arial, sans-serif;
 }
 
 #app header {
@@ -537,5 +538,142 @@
 #app .aktualnosci .news__item h1 {
   line-height: normal;
   padding: 5px;
+}
+
+#app .kontakt {
+  min-height: 800px;
+  background-color: #023a5c;
+  text-align: center;
+  line-height: 100px;
+  color: white;
+}
+
+#app .kontakt__info {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#app .kontakt__info .kontakt__item {
+  line-height: normal;
+  width: 30%;
+}
+
+#app .kontakt__info .kontakt__item h1 {
+  font-size: 20px;
+  padding: 20px 10px;
+}
+
+#app .kontakt__info .kontakt__item span {
+  padding: 10px;
+  width: 100%;
+  display: block;
+}
+
+#app .kontakt__footer {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  height: 600px;
+  margin: 0 auto;
+  border: 2px solid black;
+  text-align: right;
+}
+
+#app .kontakt__footer .kontakt__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  line-height: normal;
+  width: 60%;
+}
+
+#app .kontakt__footer .kontakt__form p {
+  font-size: 18px;
+  padding: 0 0 10px 0;
+  line-height: 1.8rem;
+}
+
+#app .kontakt__footer .kontakt__form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#app .kontakt__footer .kontakt__form form .row {
+  width: 100%;
+  margin: 10px 0;
+}
+
+#app .kontakt__footer .kontakt__form form .row input, #app .kontakt__footer .kontakt__form form .row textarea {
+  text-align: right;
+  padding: 10px;
+  color: #023a5c;
+  width: 100%;
+}
+
+#app .kontakt__footer .kontakt__form form .kontakt__checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#app .kontakt__footer .kontakt__form form .kontakt__checkbox span {
+  width: 100%;
+  text-align: left;
+  padding: 0 10px;
+  font-size: 18px;
+}
+
+#app .kontakt__footer .kontakt__form form .kontakt__checkbox div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 10px;
+}
+
+#app .kontakt__footer .kontakt__form form .kontakt__checkbox div p {
+  width: auto;
+  padding: 5px 10px;
+}
+
+#app .kontakt__footer .kontakt__form form .kontakt__checkbox div input {
+  width: 10px;
+}
+
+#app .kontakt__footer .kontakt__form form .kontakt__submit {
+  position: relative;
+  right: 0;
+  top: -60px;
+  margin-left: auto;
+  width: 20%;
+  height: 50px;
+  background-color: white;
+  color: #023a5c;
 }
 /*# sourceMappingURL=style.css.map */
