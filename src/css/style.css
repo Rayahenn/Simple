@@ -10,6 +10,27 @@
   font-family: 'Open Sans', Arial, sans-serif;
 }
 
+#app .dotted {
+  background-image: url(/src/images/white_dotted.png);
+  background-repeat: repeat-x;
+  background-position: center;
+  width: 100%;
+  height: 30px;
+  -webkit-filter: invert(40%) sepia(15%) saturate(834%) hue-rotate(168deg) brightness(100%) contrast(104%);
+          filter: invert(40%) sepia(15%) saturate(834%) hue-rotate(168deg) brightness(100%) contrast(104%);
+}
+
+#app .dotted-content {
+  background-image: url(/src/images/white_dotted.png);
+  background-repeat: repeat-x;
+  background-position: center;
+  width: 70%;
+  height: 10px;
+  margin: 0 auto;
+  -webkit-filter: invert(40%) sepia(15%) saturate(834%) hue-rotate(168deg) brightness(100%) contrast(104%);
+          filter: invert(40%) sepia(15%) saturate(834%) hue-rotate(168deg) brightness(100%) contrast(104%);
+}
+
 #app header {
   position: relative;
   display: -webkit-box;
@@ -90,7 +111,7 @@
 }
 
 #app header .menu__item a:hover {
-  border-bottom: 2px solid white;
+  text-decoration: underline;
 }
 
 #app .slider {
@@ -149,14 +170,81 @@
 
 #app .left-menu {
   position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   top: 0;
   left: 0;
   width: 125px;
-  height: 700px;
+  height: 100vh;
   z-index: 91;
   background-color: white;
   -webkit-box-shadow: 2px 0 2px;
           box-shadow: 2px 0 2px;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+#app .left-menu .active {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+#app .left-menu__arrow {
+  position: relative;
+  background-image: url(/src/images/menu_left_hide.gif);
+  cursor: pointer;
+  width: 15px;
+  right: 0;
+  height: 20px;
+  margin: auto 5px;
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+#app .left-menu ul {
+  list-style: none;
+}
+
+#app .left-menu ul li {
+  line-height: 150%;
+  color: #023a5c;
+  cursor: pointer;
+}
+
+#app .left-menu ul li:hover {
+  text-decoration: underline;
+}
+
+#app .left-menu .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  top: 100px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 5px;
+}
+
+#app .left-menu .content .main_sections {
+  width: 100%;
+}
+
+#app .left-menu .content--menu {
+  color: #023a5c;
+  cursor: pointer;
+}
+
+#app .left-menu .content--menu:hover {
+  text-decoration: underline;
 }
 
 #app .title {
@@ -589,6 +677,13 @@
   text-align: right;
 }
 
+#app .kontakt__footer h3 {
+  text-align: center;
+  font-size: 18px;
+  padding: 0 0 10px 0;
+  line-height: 1.8rem;
+}
+
 #app .kontakt__footer .kontakt__form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -601,10 +696,11 @@
   width: 60%;
 }
 
-#app .kontakt__footer .kontakt__form p {
+#app .kontakt__footer .kontakt__form h3 {
   font-size: 18px;
   padding: 0 0 10px 0;
   line-height: 1.8rem;
+  text-align: right;
 }
 
 #app .kontakt__footer .kontakt__form form {
@@ -621,7 +717,7 @@
 
 #app .kontakt__footer .kontakt__form form .row {
   width: 100%;
-  margin: 10px 0;
+  margin: 5px 0;
 }
 
 #app .kontakt__footer .kontakt__form form .row input, #app .kontakt__footer .kontakt__form form .row textarea {
@@ -629,6 +725,8 @@
   padding: 10px;
   color: #023a5c;
   width: 100%;
+  max-width: 100%;
+  min-width: 100%;
 }
 
 #app .kontakt__footer .kontakt__form form .kontakt__checkbox {
@@ -669,11 +767,90 @@
 #app .kontakt__footer .kontakt__form form .kontakt__submit {
   position: relative;
   right: 0;
-  top: -60px;
+  top: -40px;
   margin-left: auto;
   width: 20%;
   height: 50px;
   background-color: white;
   color: #023a5c;
+}
+
+#app .kontakt__footer .kontakt__social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#app .kontakt__footer .kontakt__social-media .social-media__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 40px;
+  justify-items: center;
+}
+
+#app .kontakt__footer .kontakt__social-media .social-media__icons .social-media__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 75px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#app .kontakt__footer .kontakt__job {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#app .kontakt__footer .kontakt__job p {
+  text-align: left;
+  line-height: normal;
+}
+
+#app .kontakt__footer .kontakt__job p a {
+  text-decoration: none;
+  color: white;
+}
+
+#app .kontakt__footer .kontakt__job p a:hover {
+  text-decoration: underline;
+}
+
+@-webkit-keyframes left-menu {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 100px;
+  }
+}
+
+@keyframes left-menu {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 100px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

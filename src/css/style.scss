@@ -7,6 +7,29 @@
 #app {
     width: 100%;
     font-family: 'Open Sans', Arial, sans-serif;
+
+    .dotted {
+        background-image: url(/src/images/white_dotted.png);
+        
+        background-repeat: repeat-x;
+        background-position: center;
+        width: 100%;
+        height: 30px;
+        filter: invert(40%) sepia(15%) saturate(834%) hue-rotate(168deg) brightness(100%) contrast(104%);
+    }
+    .dotted-content {
+        
+        background-image: url(/src/images/white_dotted.png);
+        
+        background-repeat: repeat-x;
+        background-position: center;
+        width: 70%;
+        height: 10px;
+        margin: 0 auto;
+        filter: invert(40%) sepia(15%) saturate(834%) hue-rotate(168deg) brightness(100%) contrast(104%);
+       
+        
+    }
     header {
         position: relative;
         display: flex;
@@ -61,7 +84,7 @@
                     margin: 10px;
                     &:hover
                     {
-                        border-bottom: 2px solid white;
+                        text-decoration: underline;
                     }
                 }
                 
@@ -104,13 +127,61 @@
     }
     .left-menu {
         position: fixed;
+        display: flex;
         top: 0;
         left: 0;
         width: 125px;
-        height: 700px;
+        height: 100vh;
         z-index: 91;
         background-color: white;
         box-shadow: 2px 0 2px;
+        transition: 0.2s ease-in-out;
+        .active {
+            transform: rotate(0deg);
+            
+        }
+        &__arrow {
+            position: relative;
+            background-image: url(/src/images/menu_left_hide.gif);
+            cursor: pointer;
+            width: 15px;
+            right: 0;
+            height: 20px;
+            margin: auto 5px;
+            background-repeat: no-repeat;
+            transform: rotate(180deg);
+            transition: 0.3s linear;
+        }
+        ul {
+            list-style: none;
+            li {
+                line-height: 150%;
+                color: #023a5c;
+                cursor: pointer;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        .content {
+            display: flex;
+            position: relative;
+            width: 80%;
+            margin: 0 auto;
+            top: 100px;
+            flex-direction: column;
+            margin: 0 5px;
+            .main_sections {
+                width: 100%;
+            }
+        }
+        .content--menu {
+            color: #023a5c;
+            cursor: pointer;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 
     .title {
@@ -436,16 +507,25 @@
             margin: 0 auto;
             border: 2px solid black;
             text-align: right;
+
+            h3 {
+                text-align: center;
+                font-size: 18px;
+                padding: 0 0 10px 0;
+                line-height: 1.8rem;
+            }
+
             .kontakt__form {
                 display: flex;
                 flex-direction: column;
                 line-height: normal;
                 width: 60%;
                 
-                p {
+                h3 {
                     font-size: 18px;
                     padding: 0 0 10px 0;
                     line-height: 1.8rem;
+                    text-align: right;
                 }
                 form {
                     display: flex;
@@ -454,12 +534,14 @@
                     flex-direction: column;
                     .row {
                         width: 100%;
-                        margin: 10px 0;
+                        margin: 5px 0;
                         input, textarea {
                             text-align: right;
                             padding: 10px;
                             color: #023a5c;
                             width: 100%;
+                            max-width: 100%;
+                            min-width: 100%;
                         }
                     }
                     .kontakt__checkbox {
@@ -492,7 +574,7 @@
                     .kontakt__submit {
                         position: relative;
                         right: 0;
-                        top: -60px;
+                        top: -40px;
                         margin-left: auto;
                         width: 20%;
                         height: 50px;
@@ -502,7 +584,50 @@
                     }
                 }
             }
+
+            .kontakt__social-media {
+                display: flex;
+                width: 20%;
+                flex-direction: column;
+
+                .social-media__icons {
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 40px;
+                    justify-items: center;
+                    
+                    .social-media__item {
+                        display: flex;
+                        height: 75px;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+
+            .kontakt__job {
+                display: flex;
+                width: 20%;
+                flex-direction: column;
+                p {
+                    text-align: left;
+                    line-height: normal;
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
         }
     }
 
+}
+
+
+@keyframes left-menu {
+    from {left: 0px;}
+    to {left: 100px;}
 }
