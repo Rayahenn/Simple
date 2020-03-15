@@ -105,23 +105,46 @@
             width: 700px;
             height: 50px;
             top: 900px;
-            padding: 10px;
+            margin: 10px;
             justify-content: center;
-            background-color: red;
-           align-items: center;
+            
+            align-items: center;
+            color: #023a5c;
+
 
             .form__main {
                 display: flex;
-                width: 500px;
-                justify-content: space-evenly;
-                line-height: 30px;
+                width: 550px;
+                align-items: center;
+                justify-content: space-between;
+                line-height: 40px;
+                background-color: #fff;
                 margin: auto;
+                span {
+                    margin: 0 5px;
+                }
+                i {
+                    font-size: 30px;
+                    margin: auto 10px;
+                }
+                input {
+                    margin: 0 10px;
+                    border: 1px solid #023a5c;
+                    padding: 0 2px;
+                    height: 30px;
+                }
             }
             button {
                 display: block;
                 position: relative;
                 width: 100px;
-                left: 100px;
+                height: 40px;
+                margin: auto 10px;
+                background-color: white;
+                font-size: 20px;
+                border: 0px transparent;
+                color: #023a5c;
+                cursor: pointer;
             }
         }
     }
@@ -171,6 +194,11 @@
             top: 100px;
             flex-direction: column;
             margin: 0 5px;
+            i {
+                font-size: 30px;
+                margin: 10px 0;
+                color: #023a5c;
+            }
             .main_sections {
                 width: 100%;
             }
@@ -423,18 +451,32 @@
             
             margin: 0 auto;
             flex-wrap: nowrap;
-            i {
+            i.left {
                 position: relative;
                 width: 30px;
                 font-size: 30px;
                 top: 50%;
                 transform: translateY(-50%);
+                cursor: pointer;
+                
+                
+            }
+            i.right {
+                position: absolute;
+                width: 30px;
+                font-size: 30px;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                cursor: pointer;
+                
                 
             }
             &__group {
                 width: calc(100% - 60px);
                 margin: 0 auto;
-                .active {
+                transition: 1s;
+                .current {
                     display: inline-block;
                 }
                 .hidden {

@@ -139,33 +139,59 @@
   width: 700px;
   height: 50px;
   top: 900px;
-  padding: 10px;
+  margin: 10px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: red;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #023a5c;
 }
 
 #app .slider .newsletter-form .form__main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 500px;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  line-height: 30px;
+  width: 550px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  line-height: 40px;
+  background-color: #fff;
   margin: auto;
+}
+
+#app .slider .newsletter-form .form__main span {
+  margin: 0 5px;
+}
+
+#app .slider .newsletter-form .form__main i {
+  font-size: 30px;
+  margin: auto 10px;
+}
+
+#app .slider .newsletter-form .form__main input {
+  margin: 0 10px;
+  border: 1px solid #023a5c;
+  padding: 0 2px;
+  height: 30px;
 }
 
 #app .slider .newsletter-form button {
   display: block;
   position: relative;
   width: 100px;
-  left: 100px;
+  height: 40px;
+  margin: auto 10px;
+  background-color: white;
+  font-size: 20px;
+  border: 0px transparent;
+  color: #023a5c;
+  cursor: pointer;
 }
 
 #app .left-menu {
@@ -232,6 +258,12 @@
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0 5px;
+}
+
+#app .left-menu .content i {
+  font-size: 30px;
+  margin: 10px 0;
+  color: #023a5c;
 }
 
 #app .left-menu .content .main_sections {
@@ -570,21 +602,35 @@
       flex-wrap: nowrap;
 }
 
-#app .aktualnosci .news i {
+#app .aktualnosci .news i.left {
   position: relative;
   width: 30px;
   font-size: 30px;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  cursor: pointer;
+}
+
+#app .aktualnosci .news i.right {
+  position: absolute;
+  width: 30px;
+  font-size: 30px;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
 }
 
 #app .aktualnosci .news__group {
   width: calc(100% - 60px);
   margin: 0 auto;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
-#app .aktualnosci .news__group .active {
+#app .aktualnosci .news__group .current {
   display: inline-block;
 }
 
