@@ -16,6 +16,7 @@
   background-position: center;
   width: 100%;
   height: 30px;
+  padding: 5px 0;
   -webkit-filter: invert(40%) sepia(15%) saturate(834%) hue-rotate(168deg) brightness(100%) contrast(104%);
           filter: invert(40%) sepia(15%) saturate(834%) hue-rotate(168deg) brightness(100%) contrast(104%);
 }
@@ -25,6 +26,8 @@
   background-repeat: repeat-x;
   background-position: center;
   width: 70%;
+  max-width: 1000px;
+  padding: 30px 0;
   height: 10px;
   margin: 0 auto;
   -webkit-filter: invert(40%) sepia(15%) saturate(834%) hue-rotate(168deg) brightness(100%) contrast(104%);
@@ -50,6 +53,11 @@
 }
 
 #app header .search {
+  position: absolute;
+  left: 80%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,7 +86,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 50%;
+  width: 40%;
   margin: 0 auto 0 30%;
   height: 100%;
   -webkit-box-align: center;
@@ -93,7 +101,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100px;
+  width: 80px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -106,7 +114,7 @@
   display: block;
   text-decoration: none;
   color: white;
-  font-size: 1.3rem;
+  font-size: 18px;
   margin: 10px;
 }
 
@@ -201,7 +209,7 @@
   display: flex;
   top: 0;
   left: 0;
-  width: 125px;
+  width: 200px;
   height: 100vh;
   z-index: 91;
   background-color: white;
@@ -209,6 +217,9 @@
           box-shadow: 2px 0 2px;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #app .left-menu .active {
@@ -221,7 +232,7 @@
   background-image: url(/src/images/menu_left_hide.gif);
   cursor: pointer;
   width: 15px;
-  right: 0;
+  right: -20px;
   height: 20px;
   margin: auto 5px;
   background-repeat: no-repeat;
@@ -250,9 +261,10 @@
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  width: 80%;
-  margin: 0 auto;
+  width: 50%;
+  margin: auto;
   top: 100px;
+  font-size: 17px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -270,6 +282,14 @@
   width: 100%;
 }
 
+#app .left-menu .content ul {
+  padding: 10px 0;
+}
+
+#app .left-menu .content ul li {
+  padding: 2px 0;
+}
+
 #app .left-menu .content--menu {
   color: #023a5c;
   cursor: pointer;
@@ -282,7 +302,7 @@
 #app .title {
   display: inline-block;
   text-align: center;
-  width: 200px;
+  width: auto;
   margin: 0 auto;
 }
 
@@ -292,7 +312,7 @@
 
 #app .title h1 {
   display: inline-block;
-  width: 100px;
+  width: 150px;
   margin: 0 auto;
   color: white;
 }
@@ -309,6 +329,7 @@
   display: -ms-grid;
   display: grid;
   width: 70%;
+  max-width: 1000px;
   height: 500px;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -373,7 +394,7 @@
 }
 
 #app .projekty {
-  height: 600px;
+  height: 700px;
   background-color: white;
   text-align: center;
   line-height: 100px;
@@ -388,6 +409,7 @@
   display: -ms-grid;
   display: grid;
   width: 70%;
+  max-width: 1000px;
   height: auto;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -409,7 +431,9 @@
   display: -ms-grid;
   display: grid;
   width: 70%;
+  max-width: 1000px;
   height: auto;
+  margin-top: 50px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -480,6 +504,7 @@
       grid-template-rows: 1fr 1fr 1fr;
   height: 70%;
   width: 70%;
+  max-width: 1000px;
   margin: 0 auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -557,6 +582,7 @@
   height: auto;
   line-height: normal;
   width: 70%;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -597,6 +623,7 @@
   position: relative;
   height: 400px;
   width: 70%;
+  max-width: 1000px;
   margin: 0 auto;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
@@ -688,6 +715,7 @@
   display: -ms-flexbox;
   display: flex;
   width: 70%;
+  max-width: 1000px;
   height: auto;
   margin: 0 auto;
   -webkit-box-pack: justify;
@@ -717,9 +745,10 @@
   display: -ms-flexbox;
   display: flex;
   width: 70%;
+  max-width: 1000px;
   height: 600px;
   margin: 0 auto;
-  border: 2px solid black;
+  border: none;
   text-align: right;
 }
 

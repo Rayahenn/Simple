@@ -9,7 +9,6 @@ const content = document.querySelector('.content');
 let counter = 0;
 
 window.addEventListener('scroll', () => {
-    console.log(window.scrollY)
     if(window.scrollY > 100) {
         content.style.top = "0px";
     }
@@ -28,18 +27,17 @@ arrow.addEventListener('click', () => {
     
 })
 
-btn.addEventListener('click', (e) => {
+btn.addEventListener('click', () => {
     e.preventDefault();
 })
 
-rightArrow.addEventListener('click', (e) => {
+rightArrow.addEventListener('click', () => {
 
     newsItems.forEach(function (item, index) {
         if(item.classList.contains('current')) {
             item.classList.remove('current')
             item.classList.add('hidden')
             counter++;
-             
         }
     })
 
@@ -57,7 +55,7 @@ rightArrow.addEventListener('click', (e) => {
     return counter;
 })
 
-leftArrow.addEventListener('click', (e) => {
+leftArrow.addEventListener('click', () => {
     if(counter <= 0) {
         counter = 12;
     }
@@ -66,11 +64,9 @@ leftArrow.addEventListener('click', (e) => {
             item.classList.remove('current')
             item.classList.add('hidden')
             counter--;
-             
         }
-        console.log(counter)
     })
-    //console.log(counter)
+
     newsItems[counter].classList.add('current')
     newsItems[counter].classList.remove('hidden')
     newsItems[counter+1].classList.add('current')

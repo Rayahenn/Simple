@@ -15,6 +15,7 @@
         background-position: center;
         width: 100%;
         height: 30px;
+        padding: 5px 0;
         filter: invert(40%) sepia(15%) saturate(834%) hue-rotate(168deg) brightness(100%) contrast(104%);
     }
     .dotted-content {
@@ -24,6 +25,8 @@
         background-repeat: repeat-x;
         background-position: center;
         width: 70%;
+        max-width: 1000px;
+        padding: 30px 0;
         height: 10px;
         margin: 0 auto;
         filter: invert(40%) sepia(15%) saturate(834%) hue-rotate(168deg) brightness(100%) contrast(104%);
@@ -44,9 +47,13 @@
             z-index: 101;
         }
         .search {
+            position: absolute;
+            left: 80%;
+            top: 50%;
+            transform: translateY(-50%);
             display: flex;
             align-items: center;
-                justify-content: center;
+            justify-content: center;
             input {
                 height: 30%;
                 padding-left: 10px;
@@ -62,7 +69,7 @@
         
         .menu {
             display: flex;
-            width: 50%;
+            width: 40%;
             margin: 0 auto 0 30%;
             height: 100%;
             align-items: center;
@@ -70,7 +77,7 @@
             
             &__item {
                 display: flex;
-                width: 100px;
+                width: 80px;
                 justify-content: center;
                 
                 align-content: space-evenly;
@@ -80,7 +87,8 @@
                     display: block;
                     text-decoration: none;
                     color: white;
-                    font-size: 1.3rem;
+                    // font-size: 1.3rem;
+                    font-size: 18px;
                     margin: 10px;
                     &:hover
                     {
@@ -153,12 +161,14 @@
         display: flex;
         top: 0;
         left: 0;
-        width: 125px;
+        width: 200px;
         height: 100vh;
         z-index: 91;
         background-color: white;
         box-shadow: 2px 0 2px;
         transition: 0.2s ease-in-out;
+        justify-content: center;
+        
         .active {
             transform: rotate(0deg);
             
@@ -168,7 +178,7 @@
             background-image: url(/src/images/menu_left_hide.gif);
             cursor: pointer;
             width: 15px;
-            right: 0;
+            right: -20px;
             height: 20px;
             margin: auto 5px;
             background-repeat: no-repeat;
@@ -189,10 +199,12 @@
         .content {
             display: flex;
             position: relative;
-            width: 80%;
-            margin: 0 auto;
+            width: 50%;
+            margin: auto;
             top: 100px;
+            font-size: 17px;
             flex-direction: column;
+            
             margin: 0 5px;
             i {
                 font-size: 30px;
@@ -201,6 +213,13 @@
             }
             .main_sections {
                 width: 100%;
+               
+            }
+            ul {
+                padding: 10px 0;
+                li {
+                    padding: 2px 0;
+                }
             }
         }
         .content--menu {
@@ -215,14 +234,14 @@
     .title {
         display: inline-block;
         text-align: center;
-        width: 200px;
+        width: auto;
         margin: 0 auto;
         img {
             vertical-align: middle;
         }
         h1 {
             display: inline-block;
-            width: 100px;
+            width: 150px;
             margin: 0 auto;
             color: white;
         }
@@ -239,6 +258,7 @@
             position: relative;
             display: grid;
             width: 70%;
+            max-width: 1000px;
             height: 500px;
             left: 50%;
             transform: translateX(-50%);
@@ -287,7 +307,7 @@
     }
 
     .projekty {
-        height: 600px;
+        height: 700px;
         background-color: white;
         text-align: center;
         line-height: 100px;
@@ -299,6 +319,7 @@
             position: relative;
             display: grid;
             width: 70%;
+            max-width: 1000px;
             height: auto;
             left: 50%;
             transform: translateX(-50%);
@@ -314,7 +335,9 @@
             position: relative;
             display: grid;
             width: 70%;
+            max-width: 1000px;
             height: auto;
+            margin-top: 50px;
             left: 50%;
             transform: translateX(-50%);
             grid-template-rows: 1fr 1fr;
@@ -368,6 +391,7 @@
             grid-template-rows: 1fr 1fr 1fr;
             height: 70%;
             width: 70%;
+            max-width: 1000px;
             margin: 0 auto;
             justify-content: center;
             
@@ -417,6 +441,7 @@
             height: auto;
             line-height: normal;
             width: 70%;
+            max-width: 1000px;
             margin: 0 auto;
             p {
                 margin: 20px 20px;
@@ -448,7 +473,7 @@
             position: relative;
             height: 400px;
             width: 70%;
-            
+            max-width: 1000px;
             margin: 0 auto;
             flex-wrap: nowrap;
             i.left {
@@ -521,6 +546,7 @@
             position: relative;
             display: flex;
             width: 70%;
+            max-width: 1000px;
             height: auto;
             margin: 0 auto;
             justify-content: space-between;
@@ -545,9 +571,10 @@
             position: relative;
             display: flex;
             width: 70%;
+            max-width: 1000px;
             height: 600px;
             margin: 0 auto;
-            border: 2px solid black;
+            border: none;
             text-align: right;
 
             h3 {
